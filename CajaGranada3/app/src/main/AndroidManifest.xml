@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
     <activity android:name=".nueva" />
-    <activity android:name=".imagenes" />
         <activity android:name=".video" />
-
+        <activity android:name=".Consulta" />
+        <activity android:name=".imagenes2" />
 </application>
 
 <uses-permission android:name="android.permission.INTERNET"/>
