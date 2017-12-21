@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CajaGranada3</string>
+    <string name="imagen_de_caja_granada_fundaci_n">Imagen de Caja Granada Fundación</string>
+    <string name="conoce_el_museo">Conoce el Museo</string>
+    <string name="entrar_al_museo">Entrar al Museo</string>
+    <string name="en_la_imagen_aparece_una_muder_usando_uno_de_los_elementos_interactivos_del_museo">En la imagen aparece una muder usando uno de los elementos interactivos del museo</string>
 </resources>

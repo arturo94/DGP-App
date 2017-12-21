@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        scanner = (Button) findViewById(R.id.button1);
+        scanner = (Button) findViewById(R.id.buttonMain);
 
         scanner.setOnClickListener(new View.OnClickListener() {
             @Override

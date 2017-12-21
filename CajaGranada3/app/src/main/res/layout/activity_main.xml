@@ -16,8 +16,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/buttonbg"
-        android:contentDescription="Entrar al Museo"
-        android:text="Entrar al Museo" />
+        android:contentDescription="@string/entrar_al_museo"
+        android:paddingStart="25dp"
+        android:text="@string/entrar_al_museo"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:paddingLeft="25dp" />
 
     <ImageView
         android:id="@+id/imageIntro"
@@ -26,9 +33,37 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:contentDescription="Imagen de Caja Granada Fundación"
+        android:contentDescription="@string/imagen_de_caja_granada_fundaci_n"
         android:scaleType="fitStart"
         android:src="@drawable/fondo3" />
+
+    <TextView
+        android:id="@+id/textLabel_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageIntro"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/conoce_el_museo"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textLabel_0"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/en_la_imagen_aparece_una_muder_usando_uno_de_los_elementos_interactivos_del_museo"
+        android:src="@drawable/dsc" />
 
 
 </RelativeLayout>
