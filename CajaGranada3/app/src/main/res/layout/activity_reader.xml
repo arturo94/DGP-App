@@ -17,10 +17,10 @@
         android:layout_alignParentStart="true"
         android:layout_gravity="start"
         android:background="@drawable/buttonbg"
-        android:contentDescription="Escanear el código q r"
+        android:contentDescription="@string/escanear_el_c_digo_q_r"
         android:paddingLeft="25dp"
         android:paddingStart="25dp"
-        android:text="Escanear el código"
+        android:text="@string/escanear_el_c_digo"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="25sp"
@@ -46,11 +46,11 @@
         android:layout_below="@+id/imageIntro"
         android:layout_marginTop="26dp"
         android:paddingLeft="20dp"
-        android:text="Instrucciones:"
+        android:text="@string/instrucciones"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold" android:paddingStart="20dp" />
 
     <TextView
         android:id="@+id/textLabel_1"
@@ -62,7 +62,7 @@
         android:layout_marginTop="13dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:text="Lea el código que se encuentra al reverso de su ticket de entrada para usar la aplicación"
+        android:text="@string/lea_el_c_digo_que_se_encuentra_al_reverso_de_su_ticket_de_entrada_para_usar_la_aplicaci_n"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
@@ -77,7 +77,7 @@
         android:layout_below="@+id/textLabel_1"
         android:layout_margin="10dp"
         android:adjustViewBounds="true"
-        android:contentDescription="En la esquina inferior derecha de su tiquet de entrada esta el código Qr necesario para entrar a la aplicación."
+        android:contentDescription="@string/en_la_esquina_inferior_derecha_de_su_tiquet_de_entrada_esta_el_c_digo_qr_necesario_para_entrar_a_la_aplicaci_n"
         android:cropToPadding="false"
         app:srcCompat="@drawable/tiquet" />
 
