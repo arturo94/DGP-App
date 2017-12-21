@@ -77,7 +77,7 @@ public class Consulta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_imagenes);
-        pieza=getIntent().getExtras().getString("pieza");
+        pieza=getIntent().getExtras().getString("pieza"); //recupera el string del qr
         getJson();
     }
 
@@ -97,7 +97,7 @@ public class Consulta extends AppCompatActivity {
 
         else{
             jsonObject=new JSONObject(json_string);
-            jsonArray = jsonObject.optJSONArray("result");
+            jsonArray = jsonObject.optJSONArray("result"); //nombre del JSON
             int count=0;
 
             while (count<jsonArray.length()){
@@ -112,6 +112,7 @@ public class Consulta extends AppCompatActivity {
             for (Elemento nombre: lista){
                 if(pieza.equals(nombre.qr)){
                     bandera=true;
+                    //selecciona la clase a la que va
                     Intent reader = new Intent(Consulta.this, imagenes2.class);
                     reader.putExtra("pieza", nombre.qr);
                     reader.putExtra("parametro", nombre.localizacion);
