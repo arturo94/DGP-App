@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/fondo2"
     android:screenOrientation="portrait"
     tools:context="com.example.arturo.cajagranada3.nueva">
 
@@ -12,10 +11,25 @@
         android:id="@+id/scan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="307dp"
         app:srcCompat="@drawable/escaner"
         tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imageIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/imagen_de_caja_granada_fundaci_n"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/fondo3" />
 
 </RelativeLayout>
