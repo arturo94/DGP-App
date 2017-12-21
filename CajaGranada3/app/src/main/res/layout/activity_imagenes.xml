@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/fondo2"
     android:screenOrientation="portrait"
     tools:context="com.example.arturo.cajagranada3.imagenes2">
-
-
 
 
     <ImageView
@@ -20,11 +17,13 @@
     <TextView
         android:id="@+id/desc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/imagen"
         android:layout_centerInParent="true"
         android:background="?android:selectableItemBackground"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:text="[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]v"
+        android:textSize="18sp" />
 
 </RelativeLayout>
