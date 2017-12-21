@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -12,14 +13,14 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class nueva extends AppCompatActivity{
 
-    ImageButton scan_btn; //boton de scaner
+    Button scan_btn; //boton de scaner
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reader);
 
-        scan_btn = (ImageButton) findViewById(R.id.scan);
+        scan_btn = (Button) findViewById(R.id.scan);
 
         //abre cámara con scanner
         final Activity activity = this;
@@ -53,11 +54,7 @@ public class nueva extends AppCompatActivity{
                /*if(result.getContents().equals("Video")) {
                     Intent reader2 = new Intent(nueva.this, video.class);
                     startActivity(reader2);
-                    }
-
-
-                else
-                    Toast.makeText(this, "Qr no valido", Toast.LENGTH_LONG).show();*/
+                    }*/
             }
         }
 
