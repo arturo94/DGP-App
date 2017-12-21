@@ -11,11 +11,10 @@
     <Button
         android:id="@+id/buttonMain"
         android:layout_width="wrap_content"
-        android:layout_height="102dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageIntro"
-        android:layout_marginTop="433dp"
         android:background="@drawable/buttonbg"
         android:contentDescription="Entrar al Museo"
         android:text="Entrar al Museo" />
