@@ -7,18 +7,24 @@
     android:screenOrientation="portrait"
     tools:context="com.example.arturo.cajagranada3.nueva">
 
-    <ImageButton
+
+    <Button
         android:id="@+id/scan"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="48dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="307dp"
-        app:srcCompat="@drawable/escaner"
-        tools:ignore="ContentDescription" />
+        android:layout_gravity="start"
+        android:background="@drawable/buttonbg"
+        android:contentDescription="Escanear el código q r"
+        android:paddingLeft="25dp"
+        android:paddingStart="25dp"
+        android:text="Escanear el código"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageIntro"
@@ -27,9 +33,38 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="8dp"
         android:contentDescription="@string/imagen_de_caja_granada_fundaci_n"
         android:scaleType="fitStart"
-        app:srcCompat="@drawable/fondo3" />
+        android:src="@drawable/fondo3" />
+
+    <TextView
+        android:id="@+id/textLabel_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageIntro"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="57dp"
+        android:text="Instrucciones:"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textLabel_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textLabel_0"
+        android:layout_alignStart="@+id/textLabel_0"
+        android:layout_below="@+id/textLabel_0"
+        android:layout_marginTop="37dp"
+        android:text="Lea el código que se encuentra al reverso de su ticket de entrada para usar la aplicación"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -34,7 +34,7 @@ public class Consulta extends AppCompatActivity {
         String JSON_URL;
         @Override
         protected void onPreExecute() {
-            JSON_URL ="http://192.168.1.111/bd.php";
+            JSON_URL ="http://museodgp.sytes.net/JSON/bd.php";
         }
 
         @Override
