@@ -41,8 +41,8 @@ public class imagenes2 extends AppCompatActivity implements TextToSpeech.OnInitL
         }
 
         Picasso.with(this)
-                //.load(texto)
-                .load("https://drive.google.com/file/d/1vpybfmwoj0ePETEC9CN1DQRPhSO4BZmw/view?usp=sharing")
+                .load(texto)
+                //.load("https://image.ibb.co/hQBSX6/ESCRITOR.jpg")
                 .error(R.mipmap.ic_launcher)
                 .fit()
                 .centerInside()
