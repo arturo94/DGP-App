@@ -34,7 +34,8 @@ public class Consulta extends AppCompatActivity {
         String JSON_URL;
         @Override
         protected void onPreExecute() {
-            JSON_URL ="http://192.168.1.121/bd.php";
+            JSON_URL ="http://museodgp.sytes.net/JSON/bd.php";
+            //JSON_URL ="http://192.168.1.121/bd.php";
         }
 
         @Override
@@ -127,6 +128,7 @@ public class Consulta extends AppCompatActivity {
                             Intent reader = new Intent(Consulta.this, imagenes2.class);
                             reader.putExtra("qr", nombre.elemento);
                             reader.putExtra("localizacion", nombre.descripcion);
+                            reader.putExtra("texto", nombre.descripcion1);
                             startActivity(reader);
                         }
                     }

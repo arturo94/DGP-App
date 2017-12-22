@@ -6,6 +6,7 @@ import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -18,9 +19,11 @@ import java.util.Locale;
 public class imagenes2 extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
     String pieza;
+    String localizacion;
     String texto;
     TextToSpeech t1; //variable del text to speech
     ImageView imagen;
+    TextView info;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +31,11 @@ public class imagenes2 extends AppCompatActivity implements TextToSpeech.OnInitL
 
         imagen= (ImageView) findViewById(R.id.imagen);
         pieza=getIntent().getExtras().getString("qr");
-        texto=getIntent().getExtras().getString("localizacion");
+        localizacion=getIntent().getExtras().getString("localizacion");
+        texto=getIntent().getExtras().getString("texto");
         t1 = new TextToSpeech(this, this);    //inicialización de variables
-
+        info= (TextView) findViewById(R.id.desc);
+        info.setText(texto);
     }
 
 
@@ -41,7 +46,7 @@ public class imagenes2 extends AppCompatActivity implements TextToSpeech.OnInitL
         }
 
         Picasso.with(this)
-                .load(texto)
+                .load(localizacion)
                 //.load("https://image.ibb.co/hQBSX6/ESCRITOR.jpg")
                 .error(R.mipmap.ic_launcher)
                 .fit()
