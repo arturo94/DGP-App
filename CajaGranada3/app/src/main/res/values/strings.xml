@@ -9,4 +9,5 @@
     <string name="instrucciones">Instrucciones:</string>
     <string name="lea_el_c_digo_que_se_encuentra_al_reverso_de_su_ticket_de_entrada_para_usar_la_aplicaci_n">Lea el código que se encuentra al reverso de su ticket de entrada para usar la aplicación</string>
     <string name="en_la_esquina_inferior_derecha_de_su_tiquet_de_entrada_esta_el_c_digo_qr_necesario_para_entrar_a_la_aplicaci_n">En la esquina inferior derecha de su tiquet de entrada esta el código Qr necesario para entrar a la aplicación.</string>
+    <string name="video">Video</string>
 </resources>
