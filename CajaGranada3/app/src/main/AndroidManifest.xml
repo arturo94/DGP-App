@@ -20,6 +20,7 @@
         <activity android:name=".video" />
         <activity android:name=".Consulta" />
         <activity android:name=".imagenes2" />
+        <activity android:name=".ElementoReader" />
 </application>
 
 <uses-permission android:name="android.permission.INTERNET"/>

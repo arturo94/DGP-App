@@ -6,19 +6,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.Toast;
+
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class nueva extends AppCompatActivity{
+public class ElementoReader extends AppCompatActivity{
 
     Button scan_btn; //boton de scaner
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nueva);
+        setContentView(R.layout.activity_reader);
 
         scan_btn = (Button) findViewById(R.id.scan);
 
@@ -41,21 +41,18 @@ public class nueva extends AppCompatActivity{
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if(result != null){
-            if(result.getContents()==null){
-                Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
+            IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+            if(result != null){
+                if(result.getContents()==null){
+                    Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent reader = new Intent(ElementoReader.this, Consulta.class);
+                    reader.putExtra("pieza", result.getContents());
+                    startActivity(reader);
+
+                }
             }
-            else {
-             if(result.getContents().equals("Inicio")) {
-                    Intent reader2 = new Intent(nueva.this, ElementoReader.class);
-                    startActivity(reader2);
-                    }
-                    else{
-                     Toast.makeText(this, "El código qr es invalido", Toast.LENGTH_LONG).show();
-             }
-            }
-        }
 
         else {
             super.onActivityResult(requestCode, resultCode, data);
