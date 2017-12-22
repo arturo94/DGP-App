@@ -123,7 +123,7 @@ public class Consulta extends AppCompatActivity {
         }
 
         if(bandera==false) {
-            Intent reader = new Intent(Consulta.this, nueva.class);
+            Intent reader = new Intent(Consulta.this, ElementoReader.class);
             startActivity(reader);
             Toast.makeText(this, "Codigo Qr invalido", Toast.LENGTH_LONG).show();
         }
