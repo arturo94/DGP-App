@@ -17,10 +17,10 @@
         android:layout_alignParentStart="true"
         android:layout_gravity="start"
         android:background="@drawable/buttonbg"
-        android:contentDescription="@string/escanear_el_c_digo_q_r"
+        android:contentDescription="Escanear el código q r"
         android:paddingLeft="25dp"
         android:paddingStart="25dp"
-        android:text="@string/escanear_el_c_digo"
+        android:text="Escanear el código"
         android:textAlignment="textStart"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="25sp"
@@ -46,11 +46,11 @@
         android:layout_below="@+id/imageIntro"
         android:layout_marginTop="26dp"
         android:paddingLeft="20dp"
-        android:text="@string/instrucciones"
+        android:text="Instrucciones:"
         android:textAllCaps="true"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp"
-        android:textStyle="bold" android:paddingStart="20dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textLabel_1"
@@ -62,30 +62,10 @@
         android:layout_marginTop="13dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-<<<<<<< HEAD
         android:text="Lea los códigos que se encuentran a lo largo del museo para saber más sobre ellas."
-=======
-        android:text="@string/lea_el_c_digo_que_se_encuentra_al_reverso_de_su_ticket_de_entrada_para_usar_la_aplicaci_n"
->>>>>>> 5c943120d8325040e028e10bb44b9d55ec0d4eb9
         android:textAllCaps="true"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="14sp"
         android:textStyle="bold" />
 
-<<<<<<< HEAD
-=======
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textLabel_1"
-        android:layout_margin="10dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/en_la_esquina_inferior_derecha_de_su_tiquet_de_entrada_esta_el_c_digo_qr_necesario_para_entrar_a_la_aplicaci_n"
-        android:cropToPadding="false"
-        app:srcCompat="@drawable/tiquet" />
-
->>>>>>> 5c943120d8325040e028e10bb44b9d55ec0d4eb9
 </RelativeLayout>
