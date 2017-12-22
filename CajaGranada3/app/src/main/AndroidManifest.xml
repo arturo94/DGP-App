@@ -21,6 +21,7 @@
         <activity android:name=".Consulta" />
         <activity android:name=".imagenes2" />
         <activity android:name=".ElementoReader" />
+        <activity android:name=".videoButton" />
 </application>
 
 <uses-permission android:name="android.permission.INTERNET"/>

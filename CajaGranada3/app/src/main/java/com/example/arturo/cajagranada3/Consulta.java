@@ -34,7 +34,7 @@ public class Consulta extends AppCompatActivity {
         String JSON_URL;
         @Override
         protected void onPreExecute() {
-            JSON_URL ="http://museodgp.sytes.net/JSON/bd.php";
+            JSON_URL ="http://192.168.1.121/bd.php";
         }
 
         @Override
@@ -89,7 +89,7 @@ public class Consulta extends AppCompatActivity {
         JSONObject jsonObject;
         JSONArray jsonArray;
 
-        String id="",localizacion="",qr="";
+        String id="",categoria="",idioma="", elemento="",descripcion="",descripcion1="";
 
         if(json_string==null){
             Toast.makeText(getApplicationContext(),"First get json", Toast.LENGTH_LONG).show();
@@ -103,20 +103,34 @@ public class Consulta extends AppCompatActivity {
             while (count<jsonArray.length()){
                 JSONObject JO=jsonArray.getJSONObject(count);
                 id=JO.getString("id");
-                localizacion=JO.getString("localizacion");
-                qr=JO.getString("qr");
+                categoria=JO.getString("categoria");
+                idioma=JO.getString("idioma");
+                elemento=JO.getString("elemento");
+                descripcion=JO.getString("descripcion");
+                descripcion1=JO.getString("descripcion1");
                 count++;
-                lista.add(new Elemento(id,localizacion,qr));
+                lista.add(new Elemento(id,categoria,idioma,elemento,descripcion,descripcion1));
             }
 
             for (Elemento nombre: lista){
-                if(pieza.equals(nombre.qr)){
+                if(pieza.equals(nombre.elemento)){
                     bandera=true;
                     //selecciona la clase a la que va
-                    Intent reader = new Intent(Consulta.this, imagenes2.class);
-                    reader.putExtra("pieza", nombre.qr);
-                    reader.putExtra("parametro", nombre.localizacion);
-                    startActivity(reader);
+                    if(nombre.categoria.equals("2")) {
+                        Intent reader = new Intent(Consulta.this, videoButton.class);
+                        reader.putExtra("qr", nombre.elemento);
+                        reader.putExtra("localizacion", nombre.descripcion);
+                        startActivity(reader);
+                    }
+                    else{
+                        if(nombre.categoria.equals("1")) {
+                            Intent reader = new Intent(Consulta.this, imagenes2.class);
+                            reader.putExtra("qr", nombre.elemento);
+                            reader.putExtra("localizacion", nombre.descripcion);
+                            startActivity(reader);
+                        }
+                    }
+
                 }
             }
 
@@ -125,7 +139,7 @@ public class Consulta extends AppCompatActivity {
         if(bandera==false) {
             Intent reader = new Intent(Consulta.this, ElementoReader.class);
             startActivity(reader);
-            Toast.makeText(this, "Codigo Qr invalido", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, pieza+"Codigo Qr invalido", Toast.LENGTH_LONG).show();
         }
 
     }

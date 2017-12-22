@@ -5,14 +5,14 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:screenOrientation="portrait"
-    tools:context="com.example.arturo.cajagranada3.imagenes2">
+    tools:context="com.example.arturo.cajagranada3.videoButton">
 
 
     <ImageButton
         android:id="@+id/imageButton3"
         style="?android:borderlessButtonStyle"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="180dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -24,13 +24,21 @@
         app:srcCompat="@drawable/degradable2button" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/textLabel_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageButton3"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="27dp"
         android:padding="20dp"
-        android:text="TextView" />
+        android:paddingLeft="20dp"
+        android:text="Haz click para reproducir el video"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

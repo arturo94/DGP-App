@@ -27,8 +27,8 @@ public class imagenes2 extends AppCompatActivity implements TextToSpeech.OnInitL
         setContentView(R.layout.activity_imagenes);
 
         imagen= (ImageView) findViewById(R.id.imagen);
-        pieza=getIntent().getExtras().getString("pieza");
-        texto=getIntent().getExtras().getString("parametro");
+        pieza=getIntent().getExtras().getString("qr");
+        texto=getIntent().getExtras().getString("localizacion");
         t1 = new TextToSpeech(this, this);    //inicialización de variables
 
     }
@@ -54,7 +54,7 @@ public class imagenes2 extends AppCompatActivity implements TextToSpeech.OnInitL
     public void onBackPressed()
     {
         t1.speak(" ", TextToSpeech.QUEUE_FLUSH, null);
-        Intent reader = new Intent(imagenes2.this, nueva.class);
+        Intent reader = new Intent(imagenes2.this, ElementoReader.class);
         startActivity(reader);
         super.onBackPressed();  // Invoca al método
     }
